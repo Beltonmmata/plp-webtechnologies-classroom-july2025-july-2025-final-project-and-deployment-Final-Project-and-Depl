@@ -1,0 +1,432 @@
+/* Google font applied */
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* header base */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #111;
+  color: #fff;
+  position: relative;
+  z-index: 2000;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+/* desktop nav */
+.nav {
+  display: block;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+}
+.nav a:hover,
+.nav a.active {
+  color: #f39c12;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* hamburger (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.9rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+/* overlay & off-canvas nav for mobile */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+  z-index: 1500;
+}
+
+/* small screens */
+@media (max-width: 900px) {
+  /* show hamburger */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* hide regular nav in flow (we'll use an off-canvas panel) */
+  .nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 86vw;
+    max-width: 340px;
+    transform: translateX(100%);
+    background: #111;
+    padding-top: 4.25rem;
+    transition: transform 0.28s ease;
+    z-index: 1600;
+    overflow-y: auto;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  /* active state for nav (when open) */
+  .nav.active {
+    transform: translateX(0);
+  }
+
+  /* overlay active */
+  .nav-overlay.active {
+    display: block;
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/hero.jpg") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: #f39c12;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #d35400;
+}
+
+.highlights {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.highlights .card {
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer a {
+  color: #f39c12;
+  margin: 0 0.5rem;
+}
+
+/* Page hero for About */
+.page-hero {
+  background: #f39c12;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.page-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* About section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.about-photo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Partners */
+.partners {
+  background: #f4f4f4;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.partner-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.partner-card span {
+  font-size: 2.5rem;
+  color: #f39c12;
+}
+
+/* Schedule Section */
+.schedule {
+  padding: 3rem 2rem;
+}
+
+/* Tabs */
+.tabs {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: #eee;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: #f39c12;
+  color: #fff;
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+/* Session Cards */
+.session {
+  background: #f4f4f4;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.session h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.session span {
+  color: #f39c12;
+  vertical-align: middle;
+}
+
+/* ===================
+   Gallery Page
+=================== */
+.gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Lightbox Modal */
+.lightbox {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===================
+   Contact Page
+=================== */
+.contact-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.contact-form,
+.contact-map {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2,
+.contact-map h2 {
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.contact-form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0066cc;
+  outline: none;
+}
+
+.contact-form .btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form .btn:hover {
+  background: #004999;
+}
+
+#formMessage {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
