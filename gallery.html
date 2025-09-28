@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Tech Summit Kenya 2025</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <span class="material-icons" aria-hidden="true">event</span>
+        Tech Summit 2025
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="material-icons" aria-hidden="true">menu</span>
+      </button>
+
+      <!-- Nav -->
+      <nav id="navbar" class="nav" aria-hidden="true">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- dark overlay that sits behind the sidebar -->
+      <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <h1>Event Gallery</h1>
+      <p>Memorable moments from past summits</p>
+    </section>
+
+    <!-- Gallery Grid -->
+    <main>
+      <section class="gallery">
+        <div class="gallery-grid">
+          <!-- Placeholder images (replace with real later) -->
+          <img
+            src="images/gallary-1.jpg"
+            alt="Event photo 1"
+            class="gallery-item"
+          />
+          <img
+            src="images/gallary-2.jpg"
+            alt="Event photo 2"
+            class="gallery-item"
+          />
+          <img
+            src="images/gallary-3.jpg"
+            alt="Event photo 3"
+            class="gallery-item"
+          />
+
+          <img
+            src="images/gallary-5.jpg"
+            alt="Event photo 5"
+            class="gallery-item"
+          />
+          <img
+            src="images/gallary-6.jpg"
+            alt="Event photo 6"
+            class="gallery-item"
+          />
+          <img
+            src="images/gallary-7.jpg"
+            alt="Event photo 7"
+            class="gallery-item"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+      <span class="material-icons close-btn">close</span>
+      <img class="lightbox-img" src="" alt="Expanded view" />
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2025 Tech Summit Kenya | Follow us:
+        <a href="#"><span class="material-icons">facebook</span></a>
+        <a href="#"><span class="material-icons">share</span></a>
+        <a href="#"><span class="material-icons">email</span></a>
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
