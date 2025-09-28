@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schedule - Tech Summit Kenya 2025</title>
+
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header (keeps mobile nav) -->
+    <header>
+      <div class="logo">
+        <span class="material-icons" aria-hidden="true">event</span>
+        Tech Summit 2025
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="material-icons" aria-hidden="true">menu</span>
+      </button>
+
+      <!-- Nav -->
+      <nav id="navbar" class="nav" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="schedule.html" class="active">Schedule</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- overlay -->
+      <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <h1>Conference Schedule</h1>
+      <p>Explore the sessions across all three days</p>
+    </section>
+
+    <!-- Schedule Tabs -->
+    <main>
+      <section class="schedule">
+        <!-- Tab Buttons -->
+        <div class="tabs" role="tablist" aria-label="Schedule days">
+          <button
+            class="tab-btn active"
+            data-day="day1"
+            role="tab"
+            aria-selected="true"
+          >
+            Day 1
+          </button>
+          <button
+            class="tab-btn"
+            data-day="day2"
+            role="tab"
+            aria-selected="false"
+          >
+            Day 2
+          </button>
+          <button
+            class="tab-btn"
+            data-day="day3"
+            role="tab"
+            aria-selected="false"
+          >
+            Day 3
+          </button>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Day 1 -->
+          <div
+            id="day1"
+            class="tab-panel active"
+            role="tabpanel"
+            aria-hidden="false"
+          >
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 09:00 - 10:00
+              </div>
+              <h3>Opening Keynote: Building Africa's Tech Future</h3>
+              <p>
+                <span class="material-icons">mic</span> Dr. Achieng Otieno —
+                Minister of ICT
+              </p>
+            </article>
+
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 10:15 - 11:15
+              </div>
+              <h3>AI for Good: Practical Use-cases</h3>
+              <p>
+                <span class="material-icons">mic</span> Jane Mwangi — AI Kenya
+              </p>
+            </article>
+
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 11:30 - 12:30
+              </div>
+              <h3>Panel: Startups & Scaleups</h3>
+              <p>
+                Founders from top African startups discuss growth and
+                fundraising.
+              </p>
+            </article>
+          </div>
+
+          <!-- Day 2 -->
+          <div id="day2" class="tab-panel" role="tabpanel" aria-hidden="true">
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 09:00 - 10:30
+              </div>
+              <h3>Blockchain & Finance</h3>
+              <p>
+                <span class="material-icons">mic</span> Ahmed Ali — FinTech Hub
+              </p>
+            </article>
+
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 10:45 - 12:00
+              </div>
+              <h3>Hands-on Workshop: Deploying Scalable APIs</h3>
+              <p>Practical session — bring a laptop.</p>
+            </article>
+
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 14:00 - 15:30
+              </div>
+              <h3>Women in Tech: Leadership Panel</h3>
+              <p>Industry leaders discuss inclusion and hiring pipelines.</p>
+            </article>
+          </div>
+
+          <!-- Day 3 -->
+          <div id="day3" class="tab-panel" role="tabpanel" aria-hidden="true">
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 09:00 - 11:00
+              </div>
+              <h3>Startup Pitch Competition</h3>
+              <p>Top teams present to a panel of investors.</p>
+            </article>
+
+            <article class="session">
+              <div class="session-meta">
+                <span class="material-icons">access_time</span> 11:30 - 12:30
+              </div>
+              <h3>Closing Keynote & Awards</h3>
+              <p>Final remarks and awards ceremony.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Tech Summit Kenya</p>
+    </footer>
+
+    <!-- External scripts (ensure these paths are correct) -->
+    <script src="js/main.js"></script>
+
+    <!-- Defensive inline tab init: only runs if no one initialized it yet -->
+    <script>
+      (function () {
+        if (window.__scheduleTabsInitialized) return;
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const tabPanels = document.querySelectorAll(".tab-panel");
+        if (!tabBtns.length || !tabPanels.length) return;
+
+        tabBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // update buttons
+            tabBtns.forEach((b) => {
+              b.classList.remove("active");
+              b.setAttribute("aria-selected", "false");
+            });
+            // update panels
+            tabPanels.forEach((p) => {
+              p.classList.remove("active");
+              p.setAttribute("aria-hidden", "true");
+            });
+
+            // activate
+            btn.classList.add("active");
+            btn.setAttribute("aria-selected", "true");
+            const panel = document.getElementById(btn.dataset.day);
+            if (panel) {
+              panel.classList.add("active");
+              panel.setAttribute("aria-hidden", "false");
+            }
+          });
+        });
+
+        window.__scheduleTabsInitialized = true;
+      })();
+    </script>
+  </body>
+</html>
