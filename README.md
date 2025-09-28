@@ -7,7 +7,7 @@ This project is my **final assignment for PLP Web Technologies (July 2025)** —
 
 ## 🌐 Live Demo
 
-🔗 [View Website Here](#) _(deployment link)_
+🔗 [View Website Here](#) _([deployment link](https://techsummit-kenya-2025.netlify.app/))_
 
 ---
 
